@@ -135,10 +135,11 @@ body {
   width: 25px;
 }
 
-.h-img-menu {
+.h-img-menu-hamburguesa {
   position: relative;
   filter: invert(100%);
   width: 25px;
+  margin: 5px;
   display: none;
 }
 
@@ -212,92 +213,6 @@ body {
   font-style: italic;
 }
 
-@media screen and (max-width: 1768px) {
-  .h-content header,
-  .productos,
-  .productos1,
-  .content-all,
-  .lorem,
-  .pie-pagina footer {
-    max-width: 1500px;
-    padding: 0px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .h-content header,
-  .productos,
-  .productos1,
-  .pie-pagina footer {
-    max-width: 412px;
-    padding: 0px;
-  }
-
-  .productos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 10px 0 0 70px;
-  }
-
-  .productos1 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 0px;
-    margin-left: 70px;
-    margin-bottom: 0px;
-  }
-
-  .card {
-    margin-bottom: 50px;
-  }
-
-  div.content-carrousel {
-    width: 10%;
-    position: absolute;
-
-    transform-style: initial;
-  }
-
-  div.content-carrousel:hover {
-    animation-play-state: paused;
-    cursor: pointer;
-  }
-
-  div.content-carrousel figure {
-    width: 80px;
-
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 0px 20px 0px black;
-    transition: all 100ms;
-  }
-
-  div.content-carrousel figure:hover {
-    box-shadow: 0px 0px 0px 0px black;
-    transition: all 300ms;
-  }
-
-  .content-carrousel img {
-    width: 50%;
-  }
-
-  .content-carrousel img:hover {
-    transform: scale(1.2);
-    transition: all 300ms;
-  }
-
-  @keyframes rotar {
-    from {
-      transform: rotateX(0deg);
-    }
-    to {
-      transform: rotateX(0deg);
-    }
-  }
-}
-
 /* NEWS CARDS*/
 div.card {
   max-width: 100%;
@@ -318,35 +233,6 @@ a.lin {
   text-decoration: none;
 }
 
-.news-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin: auto;
-  width: 70%;
-}
-
-.news-cards img {
-  width: 100%;
-  height: 180px;
-}
-
-.news-cards h3 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.news-cards a {
-  padding: 10px 0;
-  columns: #e00808;
-  text-transform: uppercase;
-  display: inline-block;
-  font-weight: bold;
-}
-
-.news-cards a:hover {
-  text-decoration: underline;
-}
 /*----------------------*/
 
 section.productos {
@@ -499,18 +385,22 @@ div.imgfoot4 {
 .one {
   grid-area: 1 / 1 / 1 / 4;
 }
+
 .two {
   grid-area: 1 / 4 / 2 / 5;
 }
+
 .tree {
   grid-area: 2 / 1 / 3 / 3;
 }
+
 .four {
   grid-area: 2 / 3 / 3 / 5;
 }
 
 /* Pie de página */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -564,6 +454,7 @@ div.imgfoot4 {
   margin-bottom: 10px;
   font-family: "Quantico";
 }
+
 .pie-pagina .grupo-1 .red-social a {
   display: inline-block;
   text-decoration: none;
@@ -659,30 +550,39 @@ div.imgfoot4 {
 .content-carrousel figure:nth-child(1) {
   transform: rotateY(0deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(2) {
   transform: rotateY(40deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(3) {
   transform: rotateY(80deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(4) {
   transform: rotateY(120deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(5) {
   transform: rotateY(160deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(6) {
   transform: rotateY(200deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(7) {
   transform: rotateY(240deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(8) {
   transform: rotateY(280deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(9) {
   transform: rotateY(320deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(10) {
   transform: rotateY(360deg) translateZ(300px);
 }
@@ -701,8 +601,238 @@ div.imgfoot4 {
   from {
     transform: rotateY(0deg);
   }
+
   to {
     transform: rotateY(360deg);
   }
 }
 
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1406px) {
+  .h-box {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1263px) {
+  .h-box {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1121px) {
+  .h-section-content {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 831px) {
+  .h-content {
+    height: auto;
+  }
+
+  .h-section-content {
+    height: 105px;
+  }
+
+  .h-content .h-logo {
+    width: 70px;
+  }
+
+  .h-content h6 {
+    bottom: 6px;
+    font-size: 15px;
+  }
+
+  /*Buscar*/
+  .h-box,
+  .h-auth a,
+  .h-stick {
+    display: none;
+  }
+
+  /*Inicio sesión*/
+  .h-auth {
+    margin: 3px;
+    padding: 3px;
+  }
+
+  .h-auth img {
+    margin: 5px;
+  }
+
+  .h-img-lupa,
+  .h-img-menu-hamburguesa {
+    display: block;
+    cursor: pointer;
+  }
+
+  .h-img-person {
+    width: 28px;
+  }
+
+  /*Populares, nuevos, noticias*/
+  .h-nav {
+    background-color: rgb(10, 26, 42);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 55%;
+    height: 100vh;
+    opacity: .8;
+    z-index: 100;
+    transform: translate(-400px);
+    transition: .3s;
+  }
+
+  .h-nav.show {
+    transform: translate(0px);
+  }
+
+  .h-nav-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 20px;
+  }
+
+  .h-nav-ul li a {
+    display: flex;
+    font-size: 20px;
+    margin: 15px;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+
+  /**/
+
+  div.content-all {
+    display: none;
+  }
+
+  /*lorem*/
+  div.lorem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: -30px;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  div.one {
+    text-align: center;
+    margin: 0px;
+  }
+
+  div.two {
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  div.tree,
+  div.four {
+    display: none;
+  }
+
+  p.uno {
+    font-family: "Quantico";
+    font-weight: 20px;
+    width: 90%;
+    margin-top: 0px;
+  }
+
+  @media screen and (max-width: 1768px) {
+
+    .h-content header,
+    .productos,
+    .productos1,
+    .content-all,
+    .lorem,
+    .pie-pagina footer {
+      max-width: 1500px;
+      padding: 0px;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+
+    .h-content header,
+    .productos,
+    .productos1,
+    .pie-pagina footer {
+      max-width: 412px;
+      padding: 0px;
+    }
+
+    .productos {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 10px 0 0 70px;
+    }
+
+    .productos1 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 0px;
+      margin-left: 70px;
+      margin-bottom: 0px;
+    }
+
+    .card {
+      margin-bottom: 50px;
+    }
+
+    div.content-carrousel {
+      width: 10%;
+      position: absolute;
+      transform-style: initial;
+    }
+
+    div.content-carrousel:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+
+    div.content-carrousel figure {
+      width: 80px;
+
+      overflow: hidden;
+      position: absolute;
+      box-shadow: 0px 0px 20px 0px black;
+      transition: all 100ms;
+    }
+
+    div.content-carrousel figure:hover {
+      box-shadow: 0px 0px 0px 0px black;
+      transition: all 300ms;
+    }
+
+    .content-carrousel img {
+      width: 50%;
+    }
+
+    .content-carrousel img:hover {
+      transform: scale(1.2);
+      transition: all 300ms;
+    }
+
+    @keyframes rotar {
+      from {
+        transform: rotateX(0deg);
+      }
+
+      to {
+        transform: rotateX(0deg);
+      }
+    }
+  }
+}
